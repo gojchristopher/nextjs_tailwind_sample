@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
@@ -30,6 +32,9 @@ module.exports = {
 					200: "#F0F0F0",
 					100: "#FCFCFC",
 				},
+			},
+			fontFamily: {
+				sans: ["'Inter'", ...defaultTheme.fontFamily.sans],
 			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
