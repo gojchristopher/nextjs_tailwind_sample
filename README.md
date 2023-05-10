@@ -1,38 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## What is Tailwind CSS
 
-## Getting Started
+ - Tailwind CSS is a front-end CSS framework, First released in May 2019.
+ - Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file.
 
-First, run the development server:
+ - It's fast, flexible, and reliable — with zero-runtime.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Installation
+ - https://tailwindcss.com/docs/installation/framework-guides
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Arbitrary Values
+ - Arbitrary values use `square brackets` to allow custom css values instead of classes built from your `tailwind.config.js`
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Presets
+ - Presets are just regular Tailwind configuration objects, taking the exact same shape as the configuration you would add in your tailwind.config.js file.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Plugins
+ - there are 11 functions that can be destructured from tailwindcss plugin which are:
+    # addUtilities()
+     - for registering new static utility styles
+     - used to create new custom components styles.
+    # matchUtilities() 
+     - for registering new dynamic utility styles
+    # addComponents()
+     - for registering new static component styles
+    # matchComponents()
+     - for registering new dynamic component styles
+    # addBase()
+     - for registering new base styles
+    # addVariant()
+     -  for registering custom static variants
+    # matchVariant()
+     - for registering custom dynamic variants
+    # theme()
+     - for looking up values in the user’s theme configuration
+    # config()
+     - for looking up values in the user’s Tailwind configuration
+    # corePlugins()
+     - for checking if a core plugin is enabled
+    # e()
+     - for manually escaping strings meant to be used in class names

@@ -2,6 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  presets:[require('./src/presets/index')],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -33,6 +34,9 @@ module.exports = {
           100: "#FCFCFC",
         },
       },
+      padding: {
+        100: "400px",
+      },
       fontFamily: {
         sans: ["'Inter'", ...defaultTheme.fontFamily.sans],
         montserrat: ["Montserrat"],
@@ -42,7 +46,23 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        wavey: {
+          "0%, 100%": {
+            transform: "scaleyY(0.5)",
+          },
+          "50%": {
+            transform: "scaleY(1.5)",
+          },
+        },
+      },
+      animation: {
+        wavey: "wavey 1000ms linear infinite",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("./src/plugins/add-components/Button"),
+    require("./src/plugins/match-utilities/animation-delay"),
+  ],
 };
