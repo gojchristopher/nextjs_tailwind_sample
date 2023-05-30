@@ -64,5 +64,6 @@ module.exports = {
   plugins: [
     require("./src/plugins/add-components/Button"),
     require("./src/plugins/match-utilities/animation-delay"),
+    require("./src/plugins/add-utilities/utils")
   ],
 };
